@@ -11,8 +11,28 @@
 |
 */
 
+
+
+//Passing Data With View Examples Snippet/*
+/*Route::get('/', function () {
+    return view('welcome',[
+        'name' => 'World'
+    ]);
+});*/
+
+
+/*Route::get('/', function () {
+    return view('welcome')->with('name','World');
+});*/
+
+
 Route::get('/', function () {
-    return view('welcome');
+   $tasks = [
+       'Go to the work',
+       'Get food from the market',
+       'Clean Home'
+   ];
+    return view('welcome',compact('tasks'));
 });
 
 Route::get('about', function () {
