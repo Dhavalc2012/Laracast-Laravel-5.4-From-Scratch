@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+    <div class="col-sm-10">
     <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">My blog</h1>
@@ -156,4 +157,7 @@
             </div>
         </div>
     </div>
+    </div>
 @endsection
+
+

@@ -44,7 +44,11 @@
 <main role="main">
 
  <div class="container">
-     @yield('content')
+     <div class="row">
+         @yield('content')
+        @include('layouts.sidebar')
+     </div>
+
  </div>
 
 </main>

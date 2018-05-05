@@ -13,4 +13,15 @@ class PostController extends Controller
     public function show(){
         return view('posts.show');
     }
+    public function create(){
+        return view('posts.create');
+    }
+    public function store(){
+        //Create New Post using the request data
+        //Save it to the database
+      Post::create(request(['title','body']));
+      return redirect('/');
+
+
+    }
 }
