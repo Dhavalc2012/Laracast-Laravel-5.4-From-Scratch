@@ -18,6 +18,10 @@ class PostController extends Controller
     }
     public function store(){
         //Create New Post using the request data
+        $this->validate(request(),[
+            'title' => 'required',
+            'body' => 'required'
+        ]);
         //Save it to the database
       Post::create(request(['title','body']));
       return redirect('/');
