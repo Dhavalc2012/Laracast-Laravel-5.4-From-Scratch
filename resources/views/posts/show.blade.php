@@ -1,5 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <h1>Place to show the post</h1>
+    <div class="col-sm-10">
+    <h1 class="col-sm-12">{{$post->title}}</h1>
+    <div class="col-sm-12">{{$post->body}}</div>
+    </div>
+
     @endsection
