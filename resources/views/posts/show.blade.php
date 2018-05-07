@@ -16,6 +16,21 @@
 
         </ul>
     </div>
+        <!-- Add Comment Area-->
+        <div class="col-sm-12">
+            <div class="card-block">
+                <form action="/posts/{{$post->id}}/comments" method="post">
+                    {{csrf_field()}}
+                    <div class="form-group">
+                        <textarea name="body" id="body" placeholder="Your comment here" required rows="10" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Add Comment</button>
+                    </div>
+                </form>
+            </div>
+@include('layouts.errors')
+        </div>
     </div>
 
     @endsection
