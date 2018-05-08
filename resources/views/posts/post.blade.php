@@ -5,6 +5,9 @@
                 <a href="/posts/{{$post->id}}">
                 <h4>{{$post->title}}</h4>
                 </a>
+                <hr>
+                <h5>By {{$post->user->name}}</h5>
+                <hr>
             </div>
             <p class="card-text">{{ str_limit($post->body, $limit = 150, $end = '...') }}
             </p>
