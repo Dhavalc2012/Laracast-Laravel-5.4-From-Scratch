@@ -40,7 +40,11 @@
     </div>
 @include('layouts.nav')
 </header>
-
+@if($flash = session('message'))
+    <div if="flash-message" class="alert alert-success" role="alert">
+        {{ $flash }}
+    </div>
+    @endif
 <main role="main">
 
  <div class="container">

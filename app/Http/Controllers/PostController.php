@@ -39,6 +39,7 @@ if($month = request('month')){
         return view('posts.create');
     }
     public function store(){
+        session()->flash('message','Your Post has been created.');
         //Create New Post using the request data
         $this->validate(request(),[
             'title' => 'required',
