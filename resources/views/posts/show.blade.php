@@ -16,6 +16,16 @@
 
         </ul>
     </div>
+     <div class="col-sm-12">
+         <h5 class="col-sm-12">Tags</h5>
+         @if(count($post->tags))
+             <ul>
+                 @foreach($post->tags as $tag)
+                     <li><A href="/posts/tags/{{$tag->name}}">{{$tag->name}}</A></li>
+                     @endforeach
+             </ul>
+             @endif
+     </div>
         <!-- Add Comment Area-->
         <div class="col-sm-12">
             <div class="card-block">
