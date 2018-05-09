@@ -1,12 +1,8 @@
 <?php
 
 //$stripe = App::make('App\Billing\Stripe');
-$stripe = resolve('App\Billing\Stripe');
+//$stripe = resolve('App\Billing\Stripe');
 //$stripe = app('App\Billing\Stripe');
-
-
-
-dd($stripe);
 
 Route::get('/','PostController@index')->name('home');
 Route::get('/posts/create','PostController@create');
