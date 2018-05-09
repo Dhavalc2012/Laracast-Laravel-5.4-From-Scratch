@@ -35,4 +35,8 @@ if($year = $filters['year']){
             ->orderByRaw('min(created_at) desc')->get()->toArray();
     }
 
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }
